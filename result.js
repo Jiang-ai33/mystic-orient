@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const fortuneLines = fortune.split('\n');
         const visibleLines = fortuneLines.slice(0, -3); // 前几行不模糊
         const blurredLines = fortuneLines.slice(-3); // 后三行模糊
-
+        
         // 显示不模糊的内容
         visibleLines.forEach(line => {
             if (line.trim()) {
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 resultDiv.appendChild(p);
             }
         });
-
+        
         // 创建模糊内容容器
         const blurContainer = document.createElement('div');
         blurContainer.className = 'relative mt-4';
@@ -37,11 +37,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // 添加获取完整报告按钮
         const fullReportButton = document.createElement('button');
         fullReportButton.textContent = '🔮 获取完整占卜报告';
-        fullReportButton.className = 'get-full-report bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors';
+        fullReportButton.className = 'get-full-report bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors mx-auto block mt-8';
         fullReportButton.onclick = function() {
             window.location.href = `payment.html?fortune=${encodeURIComponent(fortune)}`;
         };
-        blurContainer.appendChild(fullReportButton);
+        resultDiv.appendChild(fullReportButton);
     } else {
         // 如果没有运势数据，显示错误信息
         resultDiv.innerHTML = '<p class="text-red-500">未能获取运势分析结果，请返回重新测算。</p>';

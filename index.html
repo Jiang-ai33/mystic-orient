@@ -22,13 +22,39 @@
     <!-- 信息收集表单 -->
     <div class="max-w-md mx-auto bg-white p-6 rounded-2xl shadow-xl space-y-4">
         <input id="name" name="name" placeholder="姓名" class="w-full p-2 border rounded" />
-        <input id="gender" name="gender" placeholder="性别" class="w-full p-2 border rounded" />
-        <div class="flex gap-2">
-            <input id="year" name="year" placeholder="年" class="w-1/3 p-2 border rounded" />
-            <input id="month" name="month" placeholder="月" class="w-1/3 p-2 border rounded" />
-            <input id="day" name="day" placeholder="日" class="w-1/3 p-2 border rounded" />
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="gender">性别</label>
+            <select id="gender" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                <option value="">请选择性别</option>
+                <option value="男">男</option>
+                <option value="女">女</option>
+            </select>
         </div>
-        <input id="hour" name="hour" placeholder="出生时辰（如 08:00）" class="w-full p-2 border rounded" />
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2">出生日期</label>
+            <div class="grid grid-cols-3 gap-2">
+                <select id="year" class="px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    <option value="">年</option>
+                </select>
+                <select id="month" class="px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    <option value="">月</option>
+                </select>
+                <select id="day" class="px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    <option value="">日</option>
+                </select>
+            </div>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2">出生时间</label>
+            <div class="grid grid-cols-2 gap-2">
+                <select id="hour" class="px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    <option value="">时</option>
+                </select>
+                <select id="minute" class="px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    <option value="">分</option>
+                </select>
+            </div>
+        </div>
         <input id="location" name="location" placeholder="出生地" class="w-full p-2 border rounded" />
         <button
             id="predictBtn"
@@ -53,6 +79,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="index.js" defer></script>
 </body>
 </html> 
