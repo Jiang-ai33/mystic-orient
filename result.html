@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>运势分析结果</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .blur-text {
+            filter: blur(5px);
+            transition: filter 0.3s ease;
+        }
+        .blur-text:hover {
+            filter: blur(0);
+        }
+        .get-full-report {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-red-100 to-yellow-50 p-4 text-center">
+    <!-- 顶部动图与标题 -->
+    <div class="mb-6">
+        <img
+            src="https://media.giphy.com/media/l0MYL6nP3fZ6u0yli/giphy.gif"
+            alt="mystic"
+            class="mx-auto w-28 h-28 rounded-full shadow-md"
+        />
+        <h1 class="text-2xl font-bold text-purple-700 mt-4">运势分析结果</h1>
+    </div>
+
+    <!-- 结果显示区域 -->
+    <div class="max-w-md mx-auto bg-white p-6 rounded-2xl shadow-xl">
+        <div id="analysisResult" class="text-left space-y-4">
+            <!-- 分析结果将在这里显示 -->
+        </div>
+    </div>
+
+    <!-- 返回按钮 -->
+    <div class="mt-6">
+        <button onclick="window.history.back()" class="text-gray-600 hover:text-gray-800">
+            ← 返回上一页
+        </button>
+    </div>
+
+    <script src="result.js"></script>
+</body>
+</html> 

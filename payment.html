@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支付页面</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-gradient-to-b from-red-100 to-yellow-50 p-4 text-center">
+    <!-- 顶部动图与标题 -->
+    <div class="mb-6">
+        <img
+            src="https://media.giphy.com/media/l0MYL6nP3fZ6u0yli/giphy.gif"
+            alt="mystic"
+            class="mx-auto w-28 h-28 rounded-full shadow-md"
+        />
+        <h1 class="text-2xl font-bold text-purple-700 mt-4">支付解锁完整报告</h1>
+    </div>
+
+    <!-- 支付信息 -->
+    <div class="max-w-md mx-auto bg-white p-6 rounded-2xl shadow-xl">
+        <div class="text-left space-y-4">
+            <p class="text-gray-800">解锁完整占卜报告</p>
+            <p class="text-2xl font-bold text-purple-600">¥9.9</p>
+            <button id="payButton" class="w-full bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors">
+                立即支付
+            </button>
+        </div>
+    </div>
+
+    <!-- 返回按钮 -->
+    <div class="mt-6">
+        <button onclick="window.history.back()" class="text-gray-600 hover:text-gray-800">
+            ← 返回上一页
+        </button>
+    </div>
+
+    <script src="payment.js"></script>
+</body>
+</html> 

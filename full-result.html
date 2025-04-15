@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>完整占卜报告</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-gradient-to-b from-red-100 to-yellow-50 p-4">
+    <!-- 顶部动图与标题 -->
+    <div class="mb-6 text-center">
+        <img
+            src="https://media.giphy.com/media/l0MYL6nP3fZ6u0yli/giphy.gif"
+            alt="mystic"
+            class="mx-auto w-28 h-28 rounded-full shadow-md"
+        />
+        <h1 class="text-2xl font-bold text-purple-700 mt-4">完整占卜报告</h1>
+    </div>
+
+    <!-- 结果显示区域 -->
+    <div class="max-w-4xl mx-auto bg-white p-6 rounded-2xl shadow-xl">
+        <!-- 基础信息 -->
+        <div class="mb-8">
+            <h2 class="text-xl font-bold text-purple-600 mb-4">1. 四字八柱基础信息及格局</h2>
+            <div id="basicInfo" class="text-gray-800 leading-relaxed space-y-2"></div>
+        </div>
+
+        <!-- 十年大运 -->
+        <div class="mb-8">
+            <h2 class="text-xl font-bold text-purple-600 mb-4">2. 十年大运预测</h2>
+            <div id="decadeFortune" class="text-gray-800 leading-relaxed space-y-2"></div>
+        </div>
+
+        <!-- 命格性格 -->
+        <div class="mb-8">
+            <h2 class="text-xl font-bold text-purple-600 mb-4">3. 命格性格分析</h2>
+            <div id="personality" class="text-gray-800 leading-relaxed space-y-2"></div>
+        </div>
+
+        <!-- 感情婚姻 -->
+        <div class="mb-8">
+            <h2 class="text-xl font-bold text-purple-600 mb-4">4. 感情婚姻分析</h2>
+            <div id="loveMarriage" class="text-gray-800 leading-relaxed space-y-2"></div>
+        </div>
+
+        <!-- 财运 -->
+        <div class="mb-8">
+            <h2 class="text-xl font-bold text-purple-600 mb-4">5. 一生财运分析</h2>
+            <div id="wealth" class="text-gray-800 leading-relaxed space-y-2"></div>
+        </div>
+
+        <!-- 事业 -->
+        <div class="mb-8">
+            <h2 class="text-xl font-bold text-purple-600 mb-4">6. 事业发展分析</h2>
+            <div id="career" class="text-gray-800 leading-relaxed space-y-2"></div>
+        </div>
+
+        <!-- 健康 -->
+        <div class="mb-8">
+            <h2 class="text-xl font-bold text-purple-600 mb-4">7. 健康分析</h2>
+            <div id="health" class="text-gray-800 leading-relaxed space-y-2"></div>
+        </div>
+
+        <!-- 改运 -->
+        <div class="mb-8">
+            <h2 class="text-xl font-bold text-purple-600 mb-4">8. 改运秘诀物品</h2>
+            <div id="luckItems" class="text-gray-800 leading-relaxed space-y-2"></div>
+        </div>
+    </div>
+
+    <!-- 返回按钮 -->
+    <div class="mt-6 text-center">
+        <button onclick="window.history.back()" class="text-gray-600 hover:text-gray-800">
+            ← 返回上一页
+        </button>
+    </div>
+
+    <script src="full-result.js"></script>
+</body>
+</html> 
